@@ -16,8 +16,8 @@ io.on('connection', (socket) => {
   }
 
   socket.on('updateObjectLocation', data => {
-    console.log(socket.rooms)
-    console.log(data)
+    // console.log(socket.rooms)
+    // console.log(data)
     Locations.create(data)
     io.to(data.roomName).emit('updatedObjectLocation', data);
   });
